@@ -3,5 +3,5 @@
 #
 base=/system
 export CLASSPATH=$base/framework/audioelectric.jar
-exec app_process32 $base/bin com.yulong.audioelectric.AudioElectricMain "$@"
+exec app_process $base/bin com.yulong.audioelectric.AudioElectricMain "$@"
 

@@ -60,8 +60,8 @@
         "IPv4address:port"
   -->
 
-  <cur_supl_profile name="GOOGLE"
-      addr="supl.google.com"
+  <cur_supl_profile name="nokia"
+      addr="supl.nokia.com"
       port="7275"
       tls="true"
   />
@@ -261,8 +261,8 @@
 
   <!-- CDMA profile template -->
   <cdma_profile name="CDMA1"
-  	mcp_enable="true"
-  	mcp_addr="10.199.22.165"
+  	mcp_enable="false"
+  	mcp_addr="10.199.2.165"
   	mcp_port="6066"
   	pde_addr_valid="false"
   	pde_ip_type="0"
@@ -434,10 +434,6 @@
 	ut3:
         customize the SUPL UT3 timer
         available value: 1~60, default value is 10 (OMA spec)
-
-    sync_to_slp:
-        sync the AGPS setting (ex: SUPL profile, SUPL version, TLS version) from AGPSD to SLPD in runtime
-        available value: true, false (default)
   -->
   <up_setting
     ca_enable="false"
@@ -445,13 +441,13 @@
     roaming="true"
     cdma_preferred="0"
     pref_method="1"
-    supl_version="1"
-    tls_version="0"
+    supl_version="2"
+    tls_version="1"
     sha_version="0"
     supl_log="false"
     msa_enable="true"
     msb_enable="true"
-    ecid_enable="true"
+    ecid_enable="false"
     otdoa_enable="false"
     qop_hacc="22"
     qop_vacc="0"
@@ -465,7 +461,6 @@
     auto_profile_enable="true"
     ut2="11"
     ut3="10"
-    sync_to_slp="false"
   />
 
 </mtk_agps_profiles>

@@ -34,12 +34,6 @@
          so it can perform any filesystem (read, write, execute) operations
          allowed for that group. -->
 
-<!-- yulong begin
-add for FEATURE_SUPPORT_FILESAFEBOX  -->
-    <permission name="yulong.permission.READ_WRITE_YLSECURE">
-        <group gid="ylsecure_rw"/>
-    </permission>
-<!-- yulong end -->
     <permission name="android.permission.BLUETOOTH_ADMIN" >
         <group gid="net_bt_admin" />
     </permission>
@@ -69,9 +63,30 @@ add for FEATURE_SUPPORT_FILESAFEBOX  -->
         <group gid="log" />
     </permission>
 
+    <permission name="android.permission.READ_EXTERNAL_STORAGE" >
+        <group gid="sdcard_r" />
+    </permission>
+
+    <permission name="android.permission.WRITE_EXTERNAL_STORAGE" >
+        <group gid="sdcard_r" />
+        <group gid="sdcard_rw" />
+    </permission>
+
+    <!-- yulong begin
+    add for FEATURE_SUPPORT_FILESAFEBOX,the group can write safebox add by chenglixing, 20131126 -->
+   <permission name="yulong.permission.READ_WRITE_YLSECURE" >
+        <group gid="ylsecure_rw" />
+    </permission>
+    <!-- yulong end -->
+
+    <permission name="android.permission.ACCESS_ALL_EXTERNAL_STORAGE" >
+        <group gid="sdcard_r" />
+        <group gid="sdcard_rw" />
+        <group gid="sdcard_all" />
+    </permission>
+
     <permission name="android.permission.WRITE_MEDIA_STORAGE" >
         <group gid="media_rw" />
-        <group gid="sdcard_rw" />
     </permission>
 
     <permission name="android.permission.ACCESS_MTP" >
@@ -139,12 +154,13 @@ add for FEATURE_SUPPORT_FILESAFEBOX  -->
     <assign-permission name="android.permission.UPDATE_APP_OPS_STATS" uid="media" />
     <assign-permission name="android.permission.CAMERA" uid="media" />
     <assign-permission name="android.permission.ACCESS_FM_RADIO" uid="media" />
-    <!-- yulong begin
-    add for FEATURE_SUPPORT_FILESAFEBOX,add by chenlei,2015.11.9 -->
-    <assign-permission name="android.permission.READ_PHONE_STATE" uid="ylsecure_rw"/>
-    <!-- yulong end -->
 
     <assign-permission name="android.permission.ACCESS_SURFACE_FLINGER" uid="graphics" />
+
+    <!-- yulong begin
+    add for FEATURE_SUPPORT_FILESAFEBOX,the group can read phone state ,add by chenglixing, 20131126 -->
+    <assign-permission name="android.permission.READ_PHONE_STATE" uid="ylsecure_rw" />
+    <!-- yulong end -->
 
     <!-- This is a list of all the libraries available for application
          code to link against. -->
@@ -152,11 +168,9 @@ add for FEATURE_SUPPORT_FILESAFEBOX  -->
     <library name="android.test.runner"
             file="/system/framework/android.test.runner.jar" />
     <library name="javax.obex"
-            file="/system/framework/javax.obex.jar" />
-    <library name="org.apache.http.legacy"
-            file="/system/framework/org.apache.http.legacy.jar" />
+            file="/system/framework/javax.obex.jar"/>
 
     <!-- These are the standard packages that are white-listed to always have internet
          access while in power save mode, even if they aren't in the foreground. -->
-    <allow-in-power-save-except-idle package="com.android.providers.downloads" />
+    <allow-in-power-save package="com.android.providers.downloads" />
 </permissions>

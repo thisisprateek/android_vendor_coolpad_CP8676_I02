@@ -226,10 +226,6 @@
 <spnOverride numeric="310280" spn="AT&amp;T"/>
 <spnOverride numeric="310410" spn="AT&amp;T"/>
 <spnOverride numeric="310380" spn="AT&amp;T"/>
-<spnOverride numeric="310560" spn="AT&amp;T"/>
-<spnOverride numeric="310680" spn="AT&amp;T"/>
-<spnOverride numeric="310070" spn="AT&amp;T"/>
-<spnOverride numeric="310090" spn="AT&amp;T"/>
 <spnOverride numeric="310880" spn="USAACSI"/>
 <spnOverride numeric="310640" spn="USA AE Airadigm"/>
 <spnOverride numeric="310710" spn="USA ASTAC"/>
@@ -364,9 +360,6 @@
 <spnOverride numeric="40177" spn="Tele2"/>
 <spnOverride numeric="40211" spn="BT B-Mobile"/>
 <spnOverride numeric="40277" spn="TASHICELL"/>
-<spnOverride numeric="40400" spn="TATA INDICOM"/>
-<spnOverride numeric="404238" spn="Reliance"/>
-<spnOverride numeric="40441" spn="AIRCEL"/>
 <spnOverride numeric="40442" spn="AIRCEL"/>
 <spnOverride numeric="40479" spn="CellOne"/>
 <spnOverride numeric="40473" spn="CellOne"/>
@@ -521,29 +514,9 @@
 <spnOverride numeric="40544" spn="TATA DOCOMO"/>
 <spnOverride numeric="40539" spn="TATA DOCOMO"/>
 <spnOverride numeric="40537" spn="TATA DOCOMO"/>
-<spnOverride numeric="405025" spn="TATA TELE"/>
-<spnOverride numeric="405026" spn="TATA TELE"/>
-<spnOverride numeric="405027" spn="TATA TELE"/>
-<spnOverride numeric="405028" spn="TATA TELE"/>
-<spnOverride numeric="405029" spn="TATA TELE"/>
-<spnOverride numeric="405030" spn="TATA TELE"/>
-<spnOverride numeric="405031" spn="TATA TELE"/>
-<spnOverride numeric="405032" spn="TATA TELE"/>
-<spnOverride numeric="405033" spn="TATA TELE"/>
-<spnOverride numeric="405034" spn="TATA TELE"/>
-<spnOverride numeric="405035" spn="TATA TELE"/>
-<spnOverride numeric="405036" spn="TATA TELE"/>
+<spnOverride numeric="405031" spn="TATA DOCOMO"/>
 <spnOverride numeric="405037" spn="TATA TELE"/>
-<spnOverride numeric="405038" spn="TATA TELE"/>
-<spnOverride numeric="405039" spn="TATA TELE"/>
-<spnOverride numeric="405040" spn="TATA TELE"/>
-<spnOverride numeric="405041" spn="TATA TELE"/>
 <spnOverride numeric="405042" spn="TATA TELE"/>
-<spnOverride numeric="405043" spn="TATA TELE"/>
-<spnOverride numeric="405044" spn="TATA TELE"/>
-<spnOverride numeric="405045" spn="TATA TELE"/>
-<spnOverride numeric="405046" spn="TATA TELE"/>
-<spnOverride numeric="405047" spn="TATA TELE"/>
 <spnOverride numeric="405816" spn="IN UNITECH"/>
 <spnOverride numeric="405817" spn="IN UNITECH"/>
 <spnOverride numeric="405818" spn="IN UNITECH"/>
@@ -585,7 +558,6 @@
 <spnOverride numeric="405838" spn="VIDEOCON"/>
 <spnOverride numeric="405836" spn="VIDEOCON"/>
 <spnOverride numeric="405835" spn="VIDEOCON"/>
-<spnOverride numeric="40589" spn="MTS"/>
 <spnOverride numeric="405932" spn="VIDEOCON"/>
 <spnOverride numeric="40566" spn="Vodafone IN"/>
 <spnOverride numeric="40567" spn="Vodafone IN"/>
@@ -681,9 +653,7 @@
 <spnOverride numeric="45201" spn="VN Mobifone"/>
 <spnOverride numeric="45202" spn="VN VINAPHONE"/>
 <spnOverride numeric="45204" spn="VIETTEL"/>
-<!-- YULONG-START 2016.5.17 zhangqing1@yulong.com modify VNM and VIETTEL to VIETTEL for roaming -->
-<spnOverride numeric="45204" spn="VIETTEL"/>
-<!-- YULONG-END 2016.5.17 zhangqing1@yulong.com -->
+<spnOverride numeric="45204" spn="VNM and VIETTEL"/>
 <spnOverride numeric="45413" spn="China Mobile HK"/>
 <spnOverride numeric="45412" spn="China Mobile HK"/>
 <spnOverride numeric="45418" spn="CSL"/>
@@ -702,7 +672,6 @@
 <spnOverride numeric="45501" spn="CTM"/>
 <spnOverride numeric="45502" spn="CT Macao"/>
 <spnOverride numeric="45503" spn="3 Macau"/>
-<spnOverride numeric="45507" spn="China Telecom (Macau)"/>
 <spnOverride numeric="45500" spn="SmarTone MAC"/>
 <spnOverride numeric="45601" spn="Cellcard"/>
 <spnOverride numeric="45604" spn="CADCOMMS"/>

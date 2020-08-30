@@ -1,7 +1,7 @@
-xbin
 xbin/mnld
 xbin/dexdump
 xbin/prop-blobs.xbin
 xbin/showmap
+xbin/sqlite3
 xbin/tcpdump
 xbin/BGW

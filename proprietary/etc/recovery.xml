@@ -6,4 +6,7 @@
     <module name="UserManagerService" package="com.mediatek.recovery" exceptionParserClass="UserManagerExceptionParser">
         <file name="/data/system/users/0.xml" class=".UserManagerRecovery" backup="boot" />
     </module>
+    <module name="ActivityManagerService" package="com.mediatek.recovery" exceptionParserClass="ActivityManagerExceptionParser">
+        <file name="/data/data/com.android.providers.settings/databases/settings.db"  backup="boot" />
+    </module>
 </modules>

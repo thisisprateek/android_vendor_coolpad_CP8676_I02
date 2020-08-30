@@ -14,7 +14,11 @@
      limitations under the License.
 -->
 
-<smsconfigs TotalItem="1">
+<smsconfigs TotalItem="2">
+    <sms JarName="CP_NetUserMgrDex.jar"
+    	 ClassName="com.yulong.android.netusermgr.service.LeachSms"
+         ParaNum="5"
+    />
     <sms JarName="Sms_Filter.jar"
     	 ClassName="com.yulong.android.blacklist.test.SmsFilterDex"
          ParaNum="9"

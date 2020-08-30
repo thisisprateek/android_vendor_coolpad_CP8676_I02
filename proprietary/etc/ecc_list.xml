@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <EccTable>
-    <!-- 
+    <!--
         The attribute definition for tag EccEntry:
         - Ecc: the emergnecy number
         - Category: the service category
@@ -11,19 +11,23 @@
     -->
     <EccEntry Ecc="112" Category="0" Condition="1" />
     <EccEntry Ecc="911" Category="0" Condition="1" />
-    <!--
-        YULONG-START zhangqing1@yulong.com 2016.5.19
-        - Add 113/114/115 as ecc always for YUE-NAN require
-        - Modify 118 from ecc only when no sim to ecc always
-    -->
-    <EccEntry Ecc="113" Category="0" Condition="1" />
-    <EccEntry Ecc="114" Category="0" Condition="1" />
-    <EccEntry Ecc="115" Category="0" Condition="1" />
-    <EccEntry Ecc="118" Category="0" Condition="1" />
-    <!-- YULONG-END zhangqing1@yulong.com 2016.5.19 -->
+    <!-- [YULONG BEGIN] TFS_342933 - yantiefang_20150918 -->
+    <!-- Configurate emergency numbers for India -->
+    <!-- yulong begin, haolaibo@yulong.com 20150507 -->
+    <!-- modify cannot call emergency phone number problem -->
     <EccEntry Ecc="000" Category="0" Condition="0" />
     <EccEntry Ecc="08" Category="0" Condition="0" />
+    <!-- start modify by lijie6_20150602_reslove dial 119 or 110 fail when have sim card -->
     <EccEntry Ecc="110" Category="0" Condition="0" />
+    <EccEntry Ecc="118" Category="0" Condition="0" />
     <EccEntry Ecc="119" Category="0" Condition="0" />
+    <!-- end modify by lijie6_20150602 -->
     <EccEntry Ecc="999" Category="0" Condition="0" />
+    <!-- yulong end -->
+    <!-- yulong begin, wenlixin@yulong.com 20150820 -->
+    <EccEntry Ecc="100" Category="0" Condition="2" />
+    <EccEntry Ecc="101" Category="0" Condition="2" />
+    <EccEntry Ecc="102" Category="0" Condition="2" />
+    <!-- yulong end -->
+    <!-- [YULONG END] TFS_342933 - yantiefang_20150918 -->
 </EccTable>

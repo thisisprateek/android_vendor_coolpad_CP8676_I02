@@ -264,7 +264,7 @@
     </path>
     <path name="Mic_Setting_Inverse" value="setting">
         <kctl name="Audio_Preamp1_Switch" value="IN_ADC3" />>
-        <kctl name="Audio_Preamp2_Switch" value="IN_ADC1" />>        
+        <kctl name="Audio_Preamp2_Switch" value="IN_ADC1" />>
     </path>
     <path name="Mic_Setting_NoInverse" value="setting">
         <kctl name="Audio_Preamp1_Switch" value="IN_ADC1" />>

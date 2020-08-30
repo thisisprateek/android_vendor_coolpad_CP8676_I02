@@ -6,16 +6,8 @@
 #
 # Support: https://launchpad.net/mksh
 
-: ${HOME:=/data}
-: ${HOSTNAME:=$(getprop ro.product.device)}
-: ${HOSTNAME:=android}
-: ${MKSH:=/system/bin/sh}
-: ${SHELL:=$MKSH}
-: ${TERM:=xterm}
-: ${TMPDIR:=/data/local/tmp}
-: ${USER:=$(id -un)}
-export HOME HOSTNAME MKSH SHELL TERM TMPDIR USER
-
+: ${TERM:=vt100} ${HOME:=/data} ${MKSH:=/system/bin/sh} ${HOSTNAME:=$(getprop ro.product.device)}
+: ${SHELL:=$MKSH} ${USER:=$(typeset x=$(id); x=${x#*\(}; print -r -- ${x%%\)*})} ${HOSTNAME:=android}
 if (( USER_ID )); then PS1='$'; else PS1='#'; fi
 PS4='[$EPOCHREALTIME] '; PS1='${|
 	local e=$?
@@ -24,6 +16,11 @@ PS4='[$EPOCHREALTIME] '; PS1='${|
 
 	return $e
 }$USER@$HOSTNAME:${PWD:-?} '"$PS1 "
+export HOME HOSTNAME MKSH SHELL TERM USER
+alias l='ls'
+alias la='l -a'
+alias ll='l -l'
+alias lo='l -a -l'
 
 function hd {
 	local -Uui16 -Z11 pos=0
@@ -31,7 +28,7 @@ function hd {
 	local dasc line i
 
 	cat "$@" | { set +U; if read -arN -1 line; then
-		typeset -i1 'line[*]'
+		typeset -i1 line
 		i=0
 		while (( i < ${#line[*]} )); do
 			hv=${line[i++]}
@@ -56,11 +53,31 @@ function hd {
 	fi; }
 }
 
+function more {
+	(
+		set +m
+		cat "$@" |&
+		trap "rv=\$?; kill $! >/dev/null 2>&1; exit \$rv" EXIT
+		while IFS= read -pr line; do
+			llen=${%line}
+			(( llen == -1 )) && llen=${#line}
+			(( llen = llen ? (llen + COLUMNS - 1) / COLUMNS : 1 ))
+			if (( (curlin += llen) >= LINES )); then
+				print -n -- '\033[7m--more--\033[0m'
+				read -u1 || exit $?
+				[[ $REPLY = [Qq]* ]] && exit 0
+				curlin=$llen
+			fi
+			print -r -- "$line"
+		done
+	)
+}
+
 function setenv {
 	eval export "\"$1\""'="$2"'
 }
 
-for p in ~/bin; do
+for p in ~/.bin; do
 	[[ -d $p/. ]] || continue
 	[[ :$PATH: = *:$p:* ]] || PATH=$p:$PATH
 done
