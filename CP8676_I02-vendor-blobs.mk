@@ -24,3 +24,5 @@ PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/coolpad/CP8676_I02/
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/coolpad/CP8676_I02/proprietary/vendor,system/vendor)
 
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/coolpad/CP8676_I02/proprietary/xbin,system/xbin)
+
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/coolpad/CP8676_I02/proprietary/usr,system/usr)
